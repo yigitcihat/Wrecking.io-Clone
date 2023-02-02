@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 1312362416207910874}
   - component: {fileID: 1312362416207910872}
   - component: {fileID: 1312362416207910875}
+  - component: {fileID: 1081054933420312350}
   m_Layer: 0
   m_Name: EnemyController
   m_TagString: Untagged
@@ -314,7 +315,19 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
+--- !u!114 &1081054933420312350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312362416207910853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974669488c526fa41aa812b5bb8441e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1312362416249701228
 GameObject:
   m_ObjectHideFlags: 0
@@ -3530,9 +3543,10 @@ GameObject:
   - component: {fileID: 7425029141343742813}
   - component: {fileID: 144015202431510277}
   - component: {fileID: 2430503111827101051}
-  m_Layer: 0
+  - component: {fileID: 7324520483763443224}
+  m_Layer: 8
   m_Name: EnemyStoneBall
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3545,8 +3559,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3183685812245841081}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0, z: -0.495}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.87, y: 0.44, z: -0.49}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1465048696526069916}
@@ -3625,12 +3639,12 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!153 &7425029141343742813
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -3643,7 +3657,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 0
-  m_ConnectedAnchor: {x: 0, y: 0.51, z: -2.5}
+  m_ConnectedAnchor: {x: 0, y: 0.51, z: -4.53}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -3838,6 +3852,18 @@ LineRenderer:
     generateLightingData: 1
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &7324520483763443224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183685812245841081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34fea37f9ab45449becdb8b09b51464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3444462873001354659
 GameObject:
   m_ObjectHideFlags: 0
