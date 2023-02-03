@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: StylizedWaterMobile
-  m_Shader: {fileID: 4800000, guid: 56d51706552e4a944b8b25b0e5b36dd9, type: 3}
+  m_Shader: {fileID: 4800000, guid: 0fc6fe3cbeb58fb46822b6e42cbede4c, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _EMISSION
@@ -49,12 +49,16 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _FoamTex:
+        m_Texture: {fileID: 2800000, guid: a24ddeee41b659a42b3e031e47a80ae2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _FoamTexture:
         m_Texture: {fileID: 2800000, guid: 0af227fb6078e4f45a4ed1ff20c180c0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a24ddeee41b659a42b3e031e47a80ae2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -110,12 +114,16 @@ Material:
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
+    - _DepthDistance: 0.05
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _FoamIntensity: 2.04
     - _FoamScale: 10
+    - _FoamSmooth: 0.02
+    - _FoamSpread: 2
+    - _FoamStrength: 0.8
     - _FresnelExp: 0
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -141,6 +149,8 @@ Material:
     - _ReceiveShadows: 1
     - _ReflectionsIntensity: 1
     - _RefractionIntensity: 1
+    - _RimMax: 1
+    - _RimMin: 0.5
     - _Roughness: 0.6357628
     - _SecondaryFoamAlwaysVisible: 0
     - _SecondaryFoamIntensity: 4.82
@@ -154,6 +164,9 @@ Material:
     - _Surface: 0
     - _TurbulenceDistortionIntesity: 2.93
     - _TurbulenceScale: 10
+    - _UVWaveAmplitude: 0.05
+    - _UVWaveFrequency: 1
+    - _UVWaveSpeed: 1
     - _VertexOffset: 0
     - _WaveDistortionIntensity: 0.592233
     - _WavesAmplitude: 4.980582
@@ -162,19 +175,23 @@ Material:
     - _WavesSpeed: 10
     - _WorkflowMode: 1
     - _ZWrite: 1
+    - __dummy__: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.28773582, g: 0.5181741, b: 1, a: 1}
     - _Color0: {r: 0.3161764, g: 1, b: 0.94340754, a: 0.5882353}
     - _Color1: {r: 0.13473177, g: 0.24583572, b: 0.6544117, a: 0.5882353}
     - _Color2: {r: 0.038657, g: 0.28333408, b: 0.40441176, a: 0.5882353}
+    - _DepthColor: {r: 1, g: 1, b: 1, a: 1}
     - _DepthGradient1: {r: 0, g: 0, b: 0, a: 0}
     - _DepthGradient2: {r: 0, g: 0, b: 0, a: 0}
     - _DepthGradient3: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FoamColor: {r: 0, g: 0, b: 0, a: 0}
+    - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FoamSpeed: {r: 2, g: 2, b: 2, a: 2}
     - _FresnelColor: {r: 0.33459413, g: 0.657408, b: 0.9716981, a: 0.5803922}
-    - _HColor: {r: 0.785, g: 0.785, b: 0.785, a: 1}
-    - _SColor: {r: 0.19499996, g: 0.19499996, b: 0.19499996, a: 1}
+    - _HColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.6}
+    - _SColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
