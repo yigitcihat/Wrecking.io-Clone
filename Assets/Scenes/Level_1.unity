@@ -3025,7 +3025,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.51137435, y: -0.00000003696611, z: 0.00000002199726, w: 0.85935813}
+  m_LocalRotation: {x: 0.51137435, y: 0.000000036966092, z: -0.000000021997248, w: 0.85935813}
   m_LocalPosition: {x: 0, y: 21.140001, z: -19.579998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4752,7 +4752,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636694857}
-  m_LocalRotation: {x: 0.51137435, y: -0.00000003696611, z: 0.00000002199726, w: 0.85935813}
+  m_LocalRotation: {x: 0.51137435, y: 0.000000036966092, z: -0.000000021997248, w: 0.85935813}
   m_LocalPosition: {x: 0, y: 21.140001, z: -19.579998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9578,6 +9578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3630319833478920325}
+  - component: {fileID: 4119293976272478784}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -9585,6 +9586,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4119293976272478784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4119293976272478783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74cafcc10087bab4fb1597c8589b2284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &4190763155102268028
 MeshRenderer:
   m_ObjectHideFlags: 0
