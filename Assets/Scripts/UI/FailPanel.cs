@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FailPanel : InGamePanel
 {
@@ -19,6 +20,10 @@ public class FailPanel : InGamePanel
         EventManager.OpenFailPanel.RemoveListener(ShowPanel);
         EventManager.OnLevelFinish.RemoveListener(HidePanel);
     }
+    public void RestartButton()
+    {
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
+    }
 
-   
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class InGamePanel : MonoBehaviour
@@ -10,7 +11,7 @@ public class InGamePanel : MonoBehaviour
     protected CanvasGroup CanvasGroup { get { return (canvasGroup == null) ? canvasGroup = GetComponent<CanvasGroup>() : canvasGroup; } }
 
     public string PanelID;
-
+    public Button Button;
 
     private List<string> panelList
     {
@@ -28,6 +29,17 @@ public class InGamePanel : MonoBehaviour
         CanvasGroup.alpha = 1;
         CanvasGroup.interactable = true;
         CanvasGroup.blocksRaycasts = true;
+        StartCoroutine(ActivatetButton());
+    }
+    IEnumerator ActivatetButton()
+    {
+
+        yield return new WaitForSeconds(1);
+        if (PanelID != "StartPanel")
+        {
+            Button.gameObject.SetActive(true);
+        }
+      
     }
 
     public virtual void HidePanel()
@@ -49,6 +61,7 @@ public static class PanelList
 {
     public static string WinPanel = "WinPanel";
     public static string FailPanel = "FailPanel";
+    public static string StartPanel = "StartPanel";
 
     public static Dictionary<string, InGamePanel> InGamePanels = new Dictionary<string, InGamePanel>();
 
@@ -57,6 +70,8 @@ public static class PanelList
             "None",
             WinPanel,
             FailPanel,
+            StartPanel,
+
            
     };
     public static List<string> PanelIDs { get { return panelIDs.ToList(); } }

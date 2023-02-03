@@ -7,8 +7,26 @@ using System.Collections;
 
 [RequireComponent(typeof(Camera))]
 public class EnableCameraDepthInForward : MonoBehaviour {
+
+
+    private void OnEnable()
+    {
+        EventManager.OpenWinPanel.AddListener(PlayConfetti);
+    }
+    private void OnDisable()
+    {
+        EventManager.OpenWinPanel.RemoveListener(PlayConfetti);
+    }
+
+    public void PlayConfetti()
+    {
+        foreach (var item in transform.GetComponentsInChildren<ParticleSystem>())
+        {
+            item.Play();
+        }
+    }
 #if UNITY_EDITOR
-	void OnDrawGizmos(){
+    void OnDrawGizmos(){
 		Set();
 	}
 #endif

@@ -11,5 +11,5 @@ public static class EventManager
     public static UnityEvent OnLevelFinish = new UnityEvent();
     public static UnityEvent OpenWinPanel = new UnityEvent();
     public static UnityEvent OpenFailPanel= new UnityEvent();
-
+    public static UnityEvent OnEnemyDrop = new UnityEvent();
 }
