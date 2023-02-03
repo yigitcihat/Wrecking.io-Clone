@@ -24,5 +24,22 @@ public class StoneBallCollision : MonoBehaviour
             rb.AddForce((player.transform.position - transform.position+ new Vector3(0,2,0)).normalized * FORCE + new Vector3(0, Random.Range(8, 12), 0), ForceMode.VelocityChange);
             rb.velocity = Vector3.zero;
         }
+        if (collision.gameObject.layer == LayerMask.NameToLayer("PowerBox"))
+        {
+            PlayerBrain playerBrain = transform.root.GetComponentInChildren<PlayerBrain>();
+            EnemyBrain enemyBrain = transform.root.GetComponentInChildren<EnemyBrain>();
+
+            if (enemyBrain != null)
+            {
+                Debug.Log("Enemy PowerUp");
+                Destroy(collision.gameObject);
+            }
+            if (playerBrain != null)
+            {
+                playerBrain.PowerActivate(collision.gameObject.GetComponent<Collider>());
+                Debug.Log("Player PowerUp");
+                Destroy(collision.gameObject);
+            }
+        }
     }
 }

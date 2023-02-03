@@ -10,15 +10,17 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     public static GameManager Instance { get { return _instance; } }
     private int _enemies;
-    public bool isGameEnd;
+    public bool IsGameEnd,IsGameStart;
  
 
     private void OnEnable()
     {
+        EventManager.OnLevelStart.AddListener(() => IsGameStart = true);
         EventManager.OnEnemyDrop.AddListener(CheckAndDecreaseDroppedEnemy);
     }
     private void OnDisable()
     {
+        EventManager.OnLevelStart.RemoveListener(() => IsGameStart = true);
         EventManager.OnEnemyDrop.RemoveListener(CheckAndDecreaseDroppedEnemy);
     }
 
@@ -54,7 +56,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (isGameEnd)
+        if (IsGameEnd)
         {
             return;
         }
@@ -98,7 +100,7 @@ public class GameManager : MonoBehaviour
         Debug.Log(_enemies);
         if (_enemies <= 0)
         {
-            isGameEnd=true;
+            IsGameEnd = true;
             EventManager.OpenWinPanel.Invoke();
         }
     }

@@ -25,5 +25,10 @@ public class EnemyBrain : MonoBehaviour
             GetComponent<BoxCollider>().enabled= false;
             EventManager.OnEnemyDrop.Invoke();
         }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("PowerBox"))
+        {
+            Debug.Log("Enemy PowerUp");
+            Destroy(other.gameObject);
+        }
     }
 }

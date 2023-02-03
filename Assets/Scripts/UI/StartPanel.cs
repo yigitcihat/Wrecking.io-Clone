@@ -12,7 +12,6 @@ public class StartPanel : InGamePanel
     
     public void StartGame()
     {
-        Debug.Log("sdasdasd");
         EventManager.OnLevelStart.Invoke();
         HidePanel();
     }
